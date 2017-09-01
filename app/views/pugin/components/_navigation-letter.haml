@@ -1,7 +1,4 @@
 - unless @letters.empty?
-  %p
-    A to Z -
-    = params[:letter].present? ? "#{I18n.t('pugin.components.navigation-letter.showing_results')} #{params[:letter].capitalize}" : "#{I18n.t('pugin.components.navigation-letter.select_letter')}"
   %nav.navigation--letter{ aria:{ label: I18n.t('pugin.components.navigation-letter.aria_label') } }
     %ol
       %li{ data: { letter: 'all' }, class: ('active' unless local_assigns[:all_path]) } 
